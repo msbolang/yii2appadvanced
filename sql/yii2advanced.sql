@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-01-22 15:51:04
+-- Generation Time: 2017-01-24 16:04:14
 -- 服务器版本： 5.7.14
 -- PHP Version: 7.0.9
 
@@ -32,6 +32,14 @@ CREATE TABLE IF NOT EXISTS `auth_assignment` (
   `created_at` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- 转存表中的数据 `auth_assignment`
+--
+
+INSERT INTO `auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
+('用户管理', '1', 1485270976),
+('超级管理员', '1', 1485270990);
+
 -- --------------------------------------------------------
 
 --
@@ -53,7 +61,87 @@ CREATE TABLE IF NOT EXISTS `auth_item` (
 --
 
 INSERT INTO `auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `created_at`, `updated_at`) VALUES
-('/admin/assignment/assign', 2, NULL, NULL, NULL, 1485095128, 1485095128);
+('/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/assignment/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/assignment/assign', 2, NULL, NULL, NULL, 1485095128, 1485095128),
+('/admin/assignment/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/assignment/revoke', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/assignment/view', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/default/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/default/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/menu/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/menu/create', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/menu/delete', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/menu/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/menu/update', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/menu/view', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/permission/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/permission/assign', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/permission/create', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/permission/delete', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/permission/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/permission/remove', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/permission/update', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/permission/view', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/role/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/role/assign', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/role/create', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/role/delete', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/role/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/role/remove', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/role/update', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/role/view', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/route/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/route/assign', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/route/create', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/route/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/route/refresh', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/route/remove', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/rule/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/rule/create', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/rule/delete', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/rule/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/rule/update', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/rule/view', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/activate', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/change-password', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/delete', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/login', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/logout', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/request-password-reset', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/reset-password', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/signup', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/admin/user/view', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/debug/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/debug/default/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/debug/default/db-explain', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/debug/default/download-mail', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/debug/default/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/debug/default/toolbar', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/debug/default/view', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/gii/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/gii/default/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/gii/default/action', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/gii/default/diff', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/gii/default/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/gii/default/preview', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/gii/default/view', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/site/*', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/site/error', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/site/index', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/site/login', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/site/logout', 2, NULL, NULL, NULL, 1485264659, 1485264659),
+('/user/*', 2, NULL, NULL, NULL, 1485270578, 1485270578),
+('/user/create', 2, NULL, NULL, NULL, 1485270578, 1485270578),
+('/user/delete', 2, NULL, NULL, NULL, 1485270578, 1485270578),
+('/user/index', 2, NULL, NULL, NULL, 1485270578, 1485270578),
+('/user/update', 2, NULL, NULL, NULL, 1485270578, 1485270578),
+('/user/view', 2, NULL, NULL, NULL, 1485270578, 1485270578),
+('用户管理', 2, '用户管理', NULL, NULL, 1485270593, 1485270593),
+('超级管理员', 1, '超级管理员', NULL, NULL, 1485270769, 1485270769);
 
 -- --------------------------------------------------------
 
@@ -65,6 +153,19 @@ CREATE TABLE IF NOT EXISTS `auth_item_child` (
   `parent` varchar(64) NOT NULL,
   `child` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `auth_item_child`
+--
+
+INSERT INTO `auth_item_child` (`parent`, `child`) VALUES
+('用户管理', '/user/*'),
+('用户管理', '/user/create'),
+('用户管理', '/user/delete'),
+('用户管理', '/user/index'),
+('用户管理', '/user/update'),
+('用户管理', '/user/view'),
+('超级管理员', '用户管理');
 
 -- --------------------------------------------------------
 
@@ -92,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `route` varchar(256) DEFAULT NULL,
   `order` int(11) DEFAULT NULL,
   `data` blob
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -110,14 +211,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `status` int(11) NOT NULL DEFAULT '10',
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'ODAC5fQfEzh-d7cFRSoftE7-9s45zI-d', '$2y$13$2ORSUXxlSsSfLVRgKBZbTuv.H81bnYqZJ/T5688flPJ/QMHZl8msq', NULL, 'admin@admin.com', 10, 1484974639, 1484974639);
+(1, 'admin', 'ODAC5fQfEzh-d7cFRSoftE7-9s45zI-d', '$2y$13$2ORSUXxlSsSfLVRgKBZbTuv.H81bnYqZJ/T5688flPJ/QMHZl8msq', NULL, 'admin@admin.com', 10, 1484974639, 1484974639),
+(2, 'admin2', 'saddfdfs', 'fdssfee', 'adfadf', 'admin2@admin.com', 2, 1485272643, 1485272643);
 
 --
 -- Indexes for dumped tables
@@ -171,12 +273,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- 限制导出的表
 --
